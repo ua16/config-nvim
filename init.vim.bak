@@ -16,9 +16,9 @@ call plug#begin()
 
 Plug 'vim-airline/vim-airline' " Airline
 Plug 'morhetz/gruvbox' " Gruvbox
-Plug 'mhinz/vim-startify' " Startify
 Plug 'vim-scripts/AutoComplPop' " AutoComplete
 Plug 'junegunn/goyo.vim' " Goyo
+Plug 'nvim-telescope/telescope.nvim' " Telescope
 
 call plug#end()
 
@@ -52,9 +52,6 @@ vnoremap <C-v> "+P
 " space keys
 let mapleader = " "
 
-" netrw
-map <leader>. :Vex<CR>
-
 " Window switching
 map <leader>ww <C-w><C-w>
 
@@ -72,5 +69,7 @@ map <leader>ws <C-w><C-s>
 map <leader>wq <C-w><C-q>
 map <leader>wc <C-w><C-c>
 
-
+" telescope stuff
+nnoremap <leader>. <cmd>Telescope find_files theme=dropdown<cr>
+nnoremap <leader>f/ <cmd>Telescope live_grep <cr>
 
