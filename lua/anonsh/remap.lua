@@ -1,4 +1,5 @@
 local nnoremap = require("anonsh.keymap").nnoremap
+local inoremap = require("anonsh.keymap").inoremap
 
 
 -- Window switching
@@ -21,3 +22,8 @@ nnoremap("<leader>wc" , "<C-w><C-c>")
 -- Telescope stuff
 nnoremap("<leader>.", "<cmd>Telescope find_files<cr>")
 nnoremap("<leader>f/", "<cmd>Telescope live_grep<cr>")
+
+-- Emmet stuff
+
+inoremap("<C-j>", "<plug>(emmet-expand-abbr)")
+

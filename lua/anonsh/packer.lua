@@ -20,4 +20,7 @@ return require('packer').startup(function(use)
 	-- Telescope + dep
 	use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
+
+    -- Emmet
+    use 'mattn/emmet-vim'
 end)
