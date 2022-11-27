@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
 	use 'morhetz/gruvbox'
 
 	-- Auto complete mode
-	use 'vim-scripts/AutoComplPop'
+	--use 'vim-scripts/AutoComplPop'
 
 	-- Zen mode
 	use 'junegunn/goyo.vim'
@@ -23,4 +23,13 @@ return require('packer').startup(function(use)
 
     -- Emmet
     use 'mattn/emmet-vim'
+
+   -- Auto pairs
+   use 'jiangmiao/auto-pairs'
+
+   -- Use deoplete
+   use 'Shougo/deoplete.nvim'
+   use 'roxma/nvim-yarp'
+   use 'roxma/vim-hug-neovim-rpc'
+
 end)

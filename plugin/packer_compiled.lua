@@ -74,10 +74,15 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  AutoComplPop = {
+  ["auto-pairs"] = {
     loaded = true,
-    path = "/home/umar/.local/share/nvim/site/pack/packer/start/AutoComplPop",
-    url = "https://github.com/vim-scripts/AutoComplPop"
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/auto-pairs",
+    url = "https://github.com/jiangmiao/auto-pairs"
+  },
+  ["deoplete.nvim"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/deoplete.nvim",
+    url = "https://github.com/Shougo/deoplete.nvim"
   },
   ["emmet-vim"] = {
     loaded = true,
@@ -94,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["nvim-yarp"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/nvim-yarp",
+    url = "https://github.com/roxma/nvim-yarp"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -108,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-hug-neovim-rpc"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/vim-hug-neovim-rpc",
+    url = "https://github.com/roxma/vim-hug-neovim-rpc"
   }
 }
 
