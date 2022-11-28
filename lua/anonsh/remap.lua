@@ -35,24 +35,3 @@ nnoremap("<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
 -- Emmet stuff
 inoremap("<C-j>", "<plug>(emmet-expand-abbr)")
 
--- This is for deoplete
--- This makes is that tab will insert the completion
-
--- convert to luascript later
---  Map expression when a tab is hit:
---            checks if the completion popup is visible
---            if yes 
---                then it cycles to next item
---            else 
---                if expandable_or_jumpable
---                    then expands_or_jumps
---                    else returns a normal TAB
-
-vim.cmd([[
-imap <expr><TAB>
- \ pumvisible() ? "\<C-n>" :
- \ neosnippet#expandable_or_jumpable() ?
- \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
- \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-]])
