@@ -23,6 +23,8 @@ nnoremap("<leader>tt", "<cmd>tabnew<cr>")
 nnoremap("<leader>tn", "<cmd>tabnext<cr>")
 nnoremap("<leader>tp", "<cmd>tabprev<cr>")
 
+-- Tab switching by number
+
 
 -- Telescope stuff
 nnoremap("<leader>.", "<cmd>Telescope find_files<cr>")
@@ -34,6 +36,8 @@ nnoremap("<leader>sc", "<cmd>Telescope spell_suggest theme=cursor<cr>")
 nnoremap("<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
 
 -- Emmet stuff
-
 inoremap("<C-j>", "<plug>(emmet-expand-abbr)")
 
+-- This is for deoplete
+-- This makes is that tab will insert the completion
+inoremap("<Tab>", "<Down><Enter>")

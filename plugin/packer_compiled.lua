@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
+  ["autocomplete-flow"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/autocomplete-flow",
+    url = "https://github.com/wokalski/autocomplete-flow"
+  },
   ["deoplete.nvim"] = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/deoplete.nvim",
@@ -99,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["neco-syntax"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/neco-syntax",
+    url = "https://github.com/Shougo/neco-syntax"
+  },
   ["nvim-yarp"] = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/nvim-yarp",
@@ -118,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-hug-neovim-rpc"] = {
     loaded = true,

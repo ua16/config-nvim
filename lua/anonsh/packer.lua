@@ -32,4 +32,10 @@ return require('packer').startup(function(use)
    use 'roxma/nvim-yarp'
    use 'roxma/vim-hug-neovim-rpc'
 
+   -- deoplete extra stuff
+   use 'Shougo/neco-syntax'
+   use 'wokalski/autocomplete-flow'
+
+   -- vim-commentary
+   use 'tpope/vim-commentary'
 end)
