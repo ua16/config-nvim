@@ -35,3 +35,7 @@ nnoremap("<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
 -- Emmet stuff
 inoremap("<C-j>", "<plug>(emmet-expand-abbr)")
 
+-- deoplete
+vim.cmd([[
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+]])
