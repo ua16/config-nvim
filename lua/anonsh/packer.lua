@@ -8,8 +8,13 @@ return require('packer').startup(function(use)
 	-- packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+    -- Themes
+
 	-- Gruvbox
 	use 'morhetz/gruvbox'
+
+    -- Rose pine
+    use 'rose-pine/neovim'
 
 	-- Auto complete mode
 	--use 'vim-scripts/AutoComplPop'
@@ -34,8 +39,13 @@ return require('packer').startup(function(use)
 
    -- deoplete extra stuff
    use 'Shougo/neco-syntax'
-   use 'wokalski/autocomplete-flow'
 
    -- vim-commentary
    use 'tpope/vim-commentary'
+
+   -- Languages
+   use 'zah/nim.vim'
+   use 'pangloss/vim-javascript'
+
+
 end)

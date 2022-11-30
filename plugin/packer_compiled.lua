@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
-  ["autocomplete-flow"] = {
-    loaded = true,
-    path = "/home/umar/.local/share/nvim/site/pack/packer/start/autocomplete-flow",
-    url = "https://github.com/wokalski/autocomplete-flow"
-  },
   ["deoplete.nvim"] = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/deoplete.nvim",
@@ -108,6 +103,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/neco-syntax",
     url = "https://github.com/Shougo/neco-syntax"
+  },
+  neovim = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/neovim",
+    url = "https://github.com/rose-pine/neovim"
+  },
+  ["nim.vim"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/nim.vim",
+    url = "https://github.com/zah/nim.vim"
   },
   ["nvim-yarp"] = {
     loaded = true,
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/vim-hug-neovim-rpc",
     url = "https://github.com/roxma/vim-hug-neovim-rpc"
+  },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
   }
 }
 
