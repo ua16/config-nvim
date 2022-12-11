@@ -23,6 +23,10 @@ nnoremap("<leader>tt", "<cmd>tabnew<cr>")
 nnoremap("<leader>tn", "<cmd>tabnext<cr>")
 nnoremap("<leader>tp", "<cmd>tabprev<cr>")
 
+-- Navigation in the buffer
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
 -- Telescope stuff
 nnoremap("<leader>.", "<cmd>Telescope find_files<cr>")
 nnoremap("<leader>f/", "<cmd>Telescope live_grep<cr>")
@@ -39,3 +43,4 @@ inoremap("<C-j>", "<plug>(emmet-expand-abbr)")
 vim.cmd([[
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 ]])
+
