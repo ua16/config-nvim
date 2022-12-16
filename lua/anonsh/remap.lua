@@ -3,41 +3,54 @@ local inoremap = require("anonsh.keymap").inoremap
 
 
 -- Window switching
-nnoremap("<leader>ww" , "<C-w><C-w>")
+vim.keymap.set("n", "<leader>ww" , "<C-w><C-w>")
 
-nnoremap("<leader>wh" , "<C-w><C-j>")
-nnoremap("<leader>wk" , "<C-w><C-k>")
+vim.keymap.set("n", "<leader>wh" , "<C-w><C-j>")
+vim.keymap.set("n", "<leader>wk" , "<C-w><C-k>")
 
-nnoremap("<leader>wh" , "<C-w><C-h>")
-nnoremap("<leader>wl" , "C-w<C-l>")
+vim.keymap.set("n", "<leader>wh" , "<C-w><C-h>")
+vim.keymap.set("n", "<leader>wl" , "C-w<C-l>")
 
 
-nnoremap("<leader>wv" , "<C-w><C-v>")
-nnoremap("<leader>ws" , "<C-w><C-s>")
+vim.keymap.set("n", "<leader>wv" , "<C-w><C-v>")
+vim.keymap.set("n", "<leader>ws" , "<C-w><C-s>")
 
-nnoremap("<leader>wq" , "<C-w><C-q>")
-nnoremap("<leader>wc" , "<C-w><C-c>")
+vim.keymap.set("n", "<leader>wq" , "<C-w><C-q>")
+vim.keymap.set("n", "<leader>wc" , "<C-w><C-c>")
 
 -- Tab switching
-nnoremap("<leader>tt", "<cmd>tabnew<cr>")
-nnoremap("<leader>tn", "<cmd>tabnext<cr>")
-nnoremap("<leader>tp", "<cmd>tabprev<cr>")
+vim.keymap.set("n", "<leader>tt", "<cmd>tabnew<cr>")
+vim.keymap.set("n", "<leader>tn", "<cmd>tabnext<cr>")
+vim.keymap.set("n", "<leader>tp", "<cmd>tabprev<cr>")
 
 -- Navigation in the buffer
-nnoremap("<C-d>", "<C-d>zz")
-nnoremap("<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Move highlighted blocks with J and K
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Yank to system clipboard
+vim.keymap.set("n", "<leader>y", "\"+y")
+vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Replace word under the cursor
+vim.keymap.set("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
+
 
 -- Telescope stuff
-nnoremap("<leader>.", "<cmd>Telescope find_files<cr>")
-nnoremap("<leader>f/", "<cmd>Telescope live_grep<cr>")
-nnoremap("<leader>bb", "<cmd>Telescope buffers<cr>")
-nnoremap("<leader>cc", "<cmd>Telescope commands theme=ivy<cr>")
-nnoremap("<leader>ht", "<cmd>Telescope colorscheme theme=ivy<cr>")
-nnoremap("<leader>sc", "<cmd>Telescope spell_suggest theme=cursor<cr>")
-nnoremap("<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
+vim.keymap.set("n", "<leader>.", "<cmd>Telescope find_files<cr>")
+vim.keymap.set("n", "<leader>f/", "<cmd>Telescope live_grep<cr>")
+vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>")
+vim.keymap.set("n", "<leader>cc", "<cmd>Telescope commands theme=ivy<cr>")
+vim.keymap.set("n", "<leader>ht", "<cmd>Telescope colorscheme theme=ivy<cr>")
+vim.keymap.set("n", "<leader>sc", "<cmd>Telescope spell_suggest theme=cursor<cr>")
+vim.keymap.set("n", "<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
 
 -- Emmet stuff
-inoremap("<C-j>", "<plug>(emmet-expand-abbr)")
+vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
 
 -- deoplete
 vim.cmd([[
