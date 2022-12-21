@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
 	-- packer can manage itself
 	use 'wbthomason/packer.nvim'
 
+    -- Visual Stuff
+
     -- Themes
 
 	-- Gruvbox
@@ -22,6 +24,11 @@ return require('packer').startup(function(use)
 	-- Zen mode
 	use 'junegunn/goyo.vim'
 
+    -- Indent Blankline
+    use 'lukas-reineke/indent-blankline.nvim'
+
+    -- Functional Stuff
+
 	-- Telescope + dep
 	use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
@@ -29,23 +36,42 @@ return require('packer').startup(function(use)
     -- Emmet
     use 'mattn/emmet-vim'
 
-   -- Auto pairs
-   use 'jiangmiao/auto-pairs'
+    -- Auto pairs
+    use 'jiangmiao/auto-pairs'
 
-   -- Use deoplete
-   use 'Shougo/deoplete.nvim'
-   use 'roxma/nvim-yarp'
-   use 'roxma/vim-hug-neovim-rpc'
+    -- vim-commentary
+    use 'tpope/vim-commentary'
 
-   -- deoplete extra stuff
-   use 'Shougo/neco-syntax'
+    -- Languages
+    use 'zah/nim.vim'
+    use 'pangloss/vim-javascript'
 
-   -- vim-commentary
-   use 'tpope/vim-commentary'
 
-   -- Languages
-   use 'zah/nim.vim'
-   use 'pangloss/vim-javascript'
+    -- Use an lsp
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        requires = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+
+            {'williamboman/mason-lspconfig.nvim'},
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+
+            {'hrsh7th/cmp-nvim-lua'},
+
+            -- Snippets
+
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        }
+}
 
 
 end)

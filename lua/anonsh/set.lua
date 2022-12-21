@@ -12,7 +12,3 @@ vim.opt.scrolloff= 10
 
 vim.g.mapleader = " "
 
--- Makes deoplete work
-vim.cmd([[
-let g:deoplete#enable_at_startup = 1
-]])

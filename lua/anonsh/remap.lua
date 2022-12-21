@@ -51,9 +51,3 @@ vim.keymap.set("n", "<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
 
 -- Emmet stuff
 vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
-
--- deoplete
-vim.cmd([[
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-]])
-
