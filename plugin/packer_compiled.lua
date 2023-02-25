@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/home/umar/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   neovim = {
     loaded = true,
     path = "/home/umar/.local/share/nvim/site/pack/packer/start/neovim",

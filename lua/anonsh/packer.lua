@@ -46,6 +46,9 @@ return require('packer').startup(function(use)
     use 'zah/nim.vim'
     use 'pangloss/vim-javascript'
 
+    -- neoformat
+    use 'sbdchd/neoformat'
+
 
     -- Use an lsp
     use {
