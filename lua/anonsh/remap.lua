@@ -39,15 +39,17 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- Replace word under the cursor
 vim.keymap.set("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
-
 -- Telescope stuff
 vim.keymap.set("n", "<leader>.", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>f/", "<cmd>Telescope live_grep<cr>")
 vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>cc", "<cmd>Telescope commands theme=ivy<cr>")
-vim.keymap.set("n", "<leader>ht", "<cmd>Telescope colorscheme theme=ivy<cr>")
+vim.keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme theme=ivy<cr>")
 vim.keymap.set("n", "<leader>sc", "<cmd>Telescope spell_suggest theme=cursor<cr>")
-vim.keymap.set("n", "<leader>km", "<cmd>Telescope keymaps theme=dropdown<cr>")
+vim.keymap.set("n", "<leader>kb", "<cmd>Telescope keymaps theme=ivy<cr>")
 
 -- Emmet stuff
 vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
+
+-- Shortcuts 
+vim.keymap.set("n", "<leader>ff", "<cmd>Ex<cr>")
