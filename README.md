@@ -5,19 +5,85 @@ Uses Space keys for window/tab switching and telescope functions.
 
 ## packages
 
-- goyo
-- emmet (For html expansion)
-- telescope (assorted functions)
-- gruvbox (colorscheme)
-- rose-pine (colorscheme)
-- nvim-cmp (For autocompletiono)
-- Other packages to make autocompletion work
-- LSP support with lsp-zero
+the package manager used is `folke/lazy.nvim`
 
-These are tiny QOL packages 
-- jiangmiao/auto-pairs
-- tpope/vim-commentary
 
-As well as language packages for:
-- nim
-- javascript
+### Visual Packages 
+
+```
+    -- Themes
+
+	-- Gruvbox
+    {'morhetz/gruvbox'},
+
+    -- Rose pine
+    {'rose-pine/neovim'},
+
+	-- Zen mode
+    {'junegunn/goyo.vim'},
+
+    -- Indent Blankline
+    {'lukas-reineke/indent-blankline.nvim'},
+```
+
+### Functional 
+
+
+```
+
+	-- Telescope + dep
+    {'nvim-telescope/telescope.nvim'},
+    {'nvim-lua/plenary.nvim'},
+
+    -- Emmet
+    {'mattn/emmet-vim'},
+
+    -- Auto pairs
+    {'jiangmiao/auto-pairs'},
+
+    -- vim-commentary
+    {'tpope/vim-commentary'},
+
+    -- Languages
+    {'zah/nim.vim'},
+    {'pangloss/vim-javascript'},
+
+    -- neoformat
+    {'sbdchd/neoformat'},
+
+```
+
+as well as `treesitter`
+
+### LSP
+
+
+```
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        dependencies = {
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            {'williamboman/mason.nvim'},
+
+            {'williamboman/mason-lspconfig.nvim'},
+
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+
+            {'hrsh7th/cmp-nvim-lua'},
+
+            -- Snippets
+
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
+        },
+
+```
+
+LSPs can be installed via `mason.nvim`. 
+
