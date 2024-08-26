@@ -27,6 +27,11 @@ return require('packer').startup(function(use)
     -- Indent Blankline
     use 'lukas-reineke/indent-blankline.nvim'
 
+    -- Treesitter
+
+    use({'nvim-treesitter/nvim-treesitter', {run = TSUpdate}})
+
+
     -- Functional Stuff
 
 	-- Telescope + dep
