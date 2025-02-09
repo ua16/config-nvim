@@ -1,6 +1,3 @@
-local nnoremap = require("anonsh.keymap").nnoremap
-local inoremap = require("anonsh.keymap").inoremap
-
 
 -- Window switching
 vim.keymap.set("n", "<leader>ww" , "<C-w><C-w>")
@@ -54,3 +51,5 @@ vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
 -- Shortcuts 
 vim.keymap.set("n", "<leader>ff", "<cmd>Ex<cr>")
 vim.keymap.set("n", "<leader>ot", "<cmd>term<cr>")
+
+-- NOTE: harpoon keybinds are found in ugh.lua

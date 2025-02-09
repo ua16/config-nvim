@@ -20,5 +20,10 @@ return {
 
     -- neoformat
     {'sbdchd/neoformat'},
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
 
 }
