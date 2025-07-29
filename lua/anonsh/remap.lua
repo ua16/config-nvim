@@ -45,6 +45,13 @@ vim.keymap.set("n", "<leader>cs", "<cmd>Telescope colorscheme theme=ivy<cr>")
 vim.keymap.set("n", "<leader>sc", "<cmd>Telescope spell_suggest theme=cursor<cr>")
 vim.keymap.set("n", "<leader>kb", "<cmd>Telescope keymaps theme=ivy<cr>")
 
+vim.keymap.set("n", "<leader>tb", "<cmd>Telescope builtin<cr>")
+vim.keymap.set("n", "<leader>qf", "<cmd>Telescope quickfix<cr>")
+
+-- quickfix navigation
+vim.keymap.set("n", "<M-j>", "<cmd>:cnext<cr>zz")
+vim.keymap.set("n", "<M-k>", "<cmd>:cprev<cr>zz")
+
 -- Emmet stuff
 vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
 
@@ -52,4 +59,16 @@ vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
 vim.keymap.set("n", "<leader>ff", "<cmd>Ex<cr>")
 vim.keymap.set("n", "<leader>ot", "<cmd>term<cr>")
 
--- NOTE: harpoon keybinds are found in ugh.lua
+-- Stuff for LSPs
+vim.keymap.set('n', '<leader>vws', vim.lsp.buf.workspace_symbol)
+vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action)
+vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references)
+vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename)
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format) -- This has this weird thing with tabs
+
+
+
+-- NOTE: harpoon keybinds are found in ugh.lua. They are finnicky

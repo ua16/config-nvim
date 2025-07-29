@@ -13,7 +13,14 @@ require('rose-pine').setup({
 })
 
 -- set colorscheme after options
-vim.cmd('colorscheme gruvbox')
+vim.cmd('colorscheme retrobox')
 
-vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+function MakeBGTransparent()
+
+    vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+    vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+end
+
+vim.api.nvim_create_user_command('MakeBGTransparent', function() MakeBGTransparent() end, {})
+
+MakeBGTransparent()

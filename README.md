@@ -1,11 +1,21 @@
 # config-nvim
 
-My personal neovim config. Written in lua, no longer so minimal in terms of packages.
+My personal neovim config. Written in lua, somewhat minimal again in terms of packages.
 Uses Space keys for window/tab switching and telescope functions.
+
+Look at the keybinds in `remap.lua`. There are many
 
 ## packages
 
-the package manager used is `folke/lazy.nvim`
+The package manager used is `folke/lazy.nvim`. this may change with nvim 0.12.
+
+The config works as of nvim 0.11.3
+
+If you do not have to deal with java, it is best to delete the file
+`lua/anonsh/plugins/javastuff.lua`. The plugin downloads a large number
+of binaries and is very large. 
+
+LSPs should be installed manually via Mason
 
 
 ### Visual Packages 
@@ -30,7 +40,6 @@ the package manager used is `folke/lazy.nvim`
 
 
 ```
-
 	-- Telescope + dep
     {'nvim-telescope/telescope.nvim'},
     {'nvim-lua/plenary.nvim'},
@@ -44,12 +53,12 @@ the package manager used is `folke/lazy.nvim`
     -- vim-commentary
     {'tpope/vim-commentary'},
 
-    -- Languages
-    {'zah/nim.vim'},
-    {'pangloss/vim-javascript'},
-
-    -- neoformat
-    {'sbdchd/neoformat'},
+    -- harpoon
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
 
 ```
 
@@ -57,32 +66,24 @@ as well as `treesitter`
 
 ### LSP
 
+Somewhat minimal again. Might switch to autocomplete pop in the future. But
+for now sticking to nvim-cmp.
 
 ```
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
+    {'neovim/nvim-lspconfig'},
 
-            {'williamboman/mason-lspconfig.nvim'},
+    {"mason-org/mason.nvim"},
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
+    {"mason-org/mason-lspconfig.nvim"},
 
-            {'hrsh7th/cmp-nvim-lua'},
-
-            -- Snippets
-
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-        },
-
+    -- Autocompletion stuff
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'saadparwaiz1/cmp_luasnip'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-nvim-lua'},
+    {'hrsh7th/nvim-cmp'}
 ```
 
 LSPs can be installed via `mason.nvim`. 

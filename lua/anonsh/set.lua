@@ -12,3 +12,5 @@ vim.opt.scrolloff= 10
 
 vim.g.mapleader = " "
 
+vim.o.winborder = "rounded"
+

@@ -14,12 +14,7 @@ return {
     -- vim-commentary
     {'tpope/vim-commentary'},
 
-    -- Languages
-    {'zah/nim.vim'},
-    {'pangloss/vim-javascript'},
-
-    -- neoformat
-    {'sbdchd/neoformat'},
+    -- harpoon
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",

@@ -1,97 +1,32 @@
 return {
-    -- Use an lsp
+    {'neovim/nvim-lspconfig'},
+
+
     {
-        'VonHeikemen/lsp-zero.nvim',
-        dependencies = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
+    "mason-org/mason.nvim",
+    opts = {}
+    },
 
-            {'williamboman/mason-lspconfig.nvim'},
-
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-
-            {'hrsh7th/cmp-nvim-lua'},
-
-            -- Snippets
-
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
+    {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
         },
-
-        version = nil,
-
-        config = function()
+    },
 
 
-            vim.api.nvim_create_autocmd('LspAttach', {
-              group = vim.api.nvim_create_augroup('user_lsp_attach', {clear = true}),
-              callback = function(event)
-                local opts = {buffer = event.buf}
+    -- Autocompletion stuff
+    {'hrsh7th/nvim-cmp'},
+    {'hrsh7th/cmp-buffer'},
+    {'hrsh7th/cmp-path'},
+    {'saadparwaiz1/cmp_luasnip'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/cmp-nvim-lua'},
+    {'hrsh7th/nvim-cmp',
 
-
-                vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-
-                vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
-
-                vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
-                vim.keymap.set('n', '<leader>vd', function() vim.diagnostic.open_float() end, opts)
-                vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
-                vim.keymap.set('n', ']d', function() vim.diagnostic.goto_prev() end, opts)
-                vim.keymap.set('n', '<leader>vca', function() vim.lsp.buf.code_action() end, opts)
-                vim.keymap.set('n', '<leader>vrr', function() vim.lsp.buf.references() end, opts)
-                vim.keymap.set('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)
-
-                vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
-
-              end,
-            })
-
-            local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-
-
-            require('java').setup()
-
-            require('mason').setup({})
-            require('mason-lspconfig').setup({
-              handlers = {
-
-                function(server_name)
-                  require('lspconfig')[server_name].setup({
-                    capabilities = lsp_capabilities,
-                  })
-                end,
-
-                lua_ls = function()
-                  require('lspconfig').lua_ls.setup({
-
-                    capabilities = lsp_capabilities,
-                    settings = {
-                      Lua = {
-                        runtime = {
-                          version = 'LuaJIT'
-                        },
-                        diagnostics = {
-                          globals = {'vim'},
-                        },
-                        workspace = {
-                          library = {
-                            vim.env.VIMRUNTIME,
-                          }
-                        }
-                      }
-                    }
-                  })
-                end,
-
-              }
-            })
-
+    config = function()
             local cmp = require('cmp')
             local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
@@ -121,9 +56,15 @@ return {
                 end,
               },
             })
-                        
         end
-        -- That ends it
-        
-    }
+    },
+
+    -- Snippets
+
+    {'L3MON4D3/LuaSnip'},
+    {'rafamadriz/friendly-snippets'},
+
+
+
+
 }
