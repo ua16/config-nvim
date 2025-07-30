@@ -56,7 +56,7 @@ vim.keymap.set("n", "<M-k>", "<cmd>:cprev<cr>zz")
 vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
 
 -- Shortcuts 
-vim.keymap.set("n", "<leader>ff", "<cmd>Ex<cr>")
+vim.keymap.set("n", "<leader>ff", "<cmd>Oil<cr>")
 vim.keymap.set("n", "<leader>ot", "<cmd>term<cr>")
 
 -- Stuff for LSPs

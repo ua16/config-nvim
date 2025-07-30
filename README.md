@@ -50,6 +50,9 @@ LSPs should be installed manually via Mason
     -- Auto pairs
     {'jiangmiao/auto-pairs'},
 
+    -- Oil
+    {'stevearc/oil.nvim'},
+
     -- vim-commentary
     {'tpope/vim-commentary'},
 
