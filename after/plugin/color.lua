@@ -13,7 +13,8 @@ require('rose-pine').setup({
 })
 
 -- set colorscheme after options
-vim.cmd('colorscheme retrobox')
+-- gruvbox works better than retrobox with nvim-cmp
+vim.cmd('colorscheme gruvbox')
 
 function MakeBGTransparent()
 
