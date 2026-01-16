@@ -6,7 +6,7 @@ vim.keymap.set("n", "<leader>wh" , "<C-w><C-j>")
 vim.keymap.set("n", "<leader>wk" , "<C-w><C-k>")
 
 vim.keymap.set("n", "<leader>wh" , "<C-w><C-h>")
-vim.keymap.set("n", "<leader>wl" , "C-w<C-l>")
+vim.keymap.set("n", "<leader>wl" , "<C-w><C-l>")
 
 
 vim.keymap.set("n", "<leader>wv" , "<C-w><C-v>")
@@ -58,6 +58,8 @@ vim.keymap.set("i", "<C-j>", "<plug>(emmet-expand-abbr)")
 -- Shortcuts 
 vim.keymap.set("n", "<leader>ff", "<cmd>Oil<cr>")
 vim.keymap.set("n", "<leader>ot", "<cmd>term<cr>")
+
+vim.keymap.set("n", "<leader>mm", "<cmd>%y+<cr>")
 
 -- Stuff for LSPs
 vim.keymap.set('n', '<leader>vws', vim.lsp.buf.workspace_symbol)
