@@ -2,7 +2,7 @@
 -- Window switching
 vim.keymap.set("n", "<leader>ww" , "<C-w><C-w>")
 
-vim.keymap.set("n", "<leader>wh" , "<C-w><C-j>")
+vim.keymap.set("n", "<leader>wj" , "<C-w><C-j>")
 vim.keymap.set("n", "<leader>wk" , "<C-w><C-k>")
 
 vim.keymap.set("n", "<leader>wh" , "<C-w><C-h>")
