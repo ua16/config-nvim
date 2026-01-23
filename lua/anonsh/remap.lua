@@ -61,6 +61,8 @@ vim.keymap.set("n", "<leader>ot", "<cmd>term<cr>")
 
 vim.keymap.set("n", "<leader>mm", "<cmd>%y+<cr>")
 
+vim.keymap.set("n", "<leader>lp", "<cmd>%!wsl.exe prom<cr>")
+
 -- Stuff for LSPs
 vim.keymap.set('n', '<leader>vws', vim.lsp.buf.workspace_symbol)
 vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float)
