@@ -14,3 +14,7 @@ vim.g.mapleader = " "
 
 vim.o.winborder = "rounded"
 
+-- Need this for windows
+vim.opt.fileformats = { "unix", "dos" }
+vim.opt.fileformat = "unix"
+
